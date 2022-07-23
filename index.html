@@ -17,7 +17,7 @@
 <!--Custom styles end-->
     </head>
         <!--Шапка сайта-->
-<header class="page-header">
+<header class="page-header" data-header>
     <div class="container header-container">
         <a href="./index.html" class="logo">Web<span class="logoblack">Studio</span></a>
         <nav class="header-nav">
@@ -50,7 +50,7 @@
 <div>
     <section class="hero overlay">
         <h1 class="hero-title">Эффективные решения <br /> для вашего бизнеса</h1>
-        <button type="button" class="hero-btn">Заказать услугу</button>
+        <button type="button" class="hero-btn" data-modal-open>Заказать услугу</button>
     </section>
 </div>
 <!--Преимущества-->
@@ -109,16 +109,31 @@
                 <li class="section-item card-set-item">
                     <a href="">
                         <img src="./images/box1.jpg" alt="Верстка сайтов" width="370" height="294">
+                    <div class="project-overlay">
+                        <p class="project-overlay-text">
+                            Десктопные приложения
+                        </p>
+                    </div>
                     </a>
                 </li>
                 <li class="section-item card-set-item">
                     <a href="">
                         <img src="./images/box2.jpg" alt="Верстка мобильных приложений" width="370" height="294">
+                    <div class="project-overlay">
+                        <p class="project-overlay-text">
+                            Мобильные приложения
+                        </p>
+                    </div>
                     </a>
                 </li>
                 <li class="section-item card-set-item">
                     <a href="">
                         <img src="./images/box3.jpg" alt="Веб-дизайн" width="370" height="294">
+                    <div class="project-overlay">
+                        <p class="project-overlay-text">
+                            Дизайнерские решения
+                        </p>
+                    </div>
                     </a>
                 </li>
             </ul>
@@ -388,6 +403,18 @@
         </div>
         
     </div>
-</footer> 
+</footer>
+<!--Модальне вікно--> 
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="modal-btn" data-modal-close>
+            <svg class="modal-btn-icon" width="11" height="11">
+                <use href="./images/icons.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+<script src="./js/header-scroll.js"></script>
+<script src="./js/modal.js"></script>
     </body>
 </html>
